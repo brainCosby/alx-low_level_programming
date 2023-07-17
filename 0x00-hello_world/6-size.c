@@ -7,11 +7,11 @@
  */
 int main(viod)
 {
-	printf("Size of a char: %d byte(s)\n",  (int)sizeof(char));
-	printf("Size of a int: %d byte(s)\n",  (int)sizeof(int));
-	printf("Size of a long: %d byte(s)\n", (int)sizeof(long));
-	printf("Size of a long long: %d byte(s)\n", (int)sizeof(long long));
-	printf("Size of a float: %d byte(s)\n", (int)sizeof(float));
+	printf("Size of a char: %lu byte(s)\n", sizeof(char));
+	printf("Size of a int: %lu byte(s)\n",  sizeof(int));
+	printf("Size of a long: %lu byte(s)\n", sizeof(long));
+	printf("Size of a long long: %lu byte(s)\n", sizeof(long long));
+	printf("Size of a float: %lu byte(s)\n", sizeof(float));
 
 	return (0);
 }
