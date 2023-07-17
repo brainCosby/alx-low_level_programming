@@ -1,11 +1,10 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 /**
  * main - The main function is the entery point of the program
  * Return: Te program returns 0 after successfull run
  */
-int main(viod)
+int main(void)
 {
 	printf("Size of a char: %lu byte(s)\n", sizeof(char));
 	printf("Size of a int: %lu byte(s)\n",  sizeof(int));
