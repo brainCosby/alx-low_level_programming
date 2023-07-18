@@ -7,7 +7,9 @@
  */
 int print_last_digit(int num)
 {
-	int digit = num % 10;
+	int digit;
+
+	digit = num % 10;
 
 	if (digit < '0')
 	{
@@ -16,7 +18,7 @@ int print_last_digit(int num)
 	}
 	else
 	{
-		_putchar(digit + 48);
+		_putchar(digit + '0');
 		return (digit);
 	}
 }
