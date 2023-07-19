@@ -17,11 +17,11 @@ void jack_bauer(void)
 				{
 					if (i >= 2 && b >= 4)
 					{
-						_putchar(a + 48);
-						_putchar(b + 48);
+						_putchar(i + 48);
+						_putchar(j + 48);
 						_putchar(58);
-						_putchar(c + 48);
-						_putchar(d + 48);
+						_putchar(k + 48);
+						_putchar(l + 48);
 						_putchar('\n');
 					}
 				}
