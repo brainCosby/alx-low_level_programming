@@ -6,11 +6,11 @@
  * @argv: An array of the command line arguments parsed
  * Return: Return 0 after successful run
  */
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
 	(void) argv;
 
-	printf("%d\n", argc);
+	printf("%d\n", argc - 1);
 
 	return (0);
 }
