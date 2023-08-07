@@ -11,16 +11,19 @@ int main(int argc, char *argv[])
 {
 	int mul;
 
-	if (argc > 1)
-	{
-		mul = atoi(argv[1]) * atoi(argv[2]);
-		printf("%d\n", mul);
-	}
-	else
+	int first_number;
+	int second_number;
+
+	if (argc != 3)
 	{
 		printf("Error\n");
 		return (1);
 	}
+
+	first_number = atoi(argv[1]);
+	second_number = atoi(argv[2]);
+	mul = first_number * second_number;
+	printf("%d\n", mul);
 
 	return (0);
 }
