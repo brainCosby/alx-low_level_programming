@@ -22,7 +22,7 @@ int **alloc_grid(int width, int height)
 	}
 
 	/* allocace memory for the 2D array */
-	two_dim_array = (int **)malloc((width * height) * sizeof(int));
+	two_dim_array = (int **)malloc(height * sizeof(int));
 
 	for (i = 0; i < height; i++)
 	{
