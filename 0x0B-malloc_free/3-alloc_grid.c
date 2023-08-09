@@ -12,7 +12,7 @@
 int **alloc_grid(int width, int height)
 {
 	int i, j;
-	int **two_dim_array;
+	int **grid;
 
 	/* if width or height is 0 or negative */
 	if (width <= 0 || height <= 0)
@@ -20,35 +20,34 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 	}
 	/* allocace memory for the 2D array */
-	two_dim_array = (int **)malloc(height * sizeof(int));
-	if (two_dim_array != NULL)
+	grid = (int **)malloc(height * sizeof(int));
+
+	if (grid != NULL)
 	{
-		/*Allocate memory for each row and initialize elements to 0 */
 		for (i = 0; i < height; i++)
 		{
-			two_dim_array[i] = (int *)malloc(width * sizeof(int));
-			if (two_dim_array[i] == NULL)
+			grid[i] = (int *)malloc(width * sizeof(int));
+			/* allocation fails */
+			if (grid[i] == NULL)
 			{
-				/* Handle memory allocation failure for individual rows */
 				/* Free previously allocated memory before returning NULL */
 				for (j = 0; j < i; j++)
 				{
-					free(two_dim_array[j]);
+					free(grid[j]);
 				}
-				free(two_dim_array);
+				free(grid);
 				return (NULL);
 			}
-			/* Initialize elements to 0 */
+			/* initialize elements to 0 */
 			for (j = 0; j < width; j++)
 			{
-				two_dim_array[i][j] = 0;
+				grid[i][j] = 0;
 			}
 		}
-		return (two_dim_array);
+		return (grid);
 	}
 	else
 	{
-		/* Handle memory allocation failure for the array of row pointers */
 		return (NULL);
 	}
 }
