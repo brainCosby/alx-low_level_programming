@@ -12,16 +12,18 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	int s1_len = 0;
-	int s2_len = 0;
+	int s1_len = 0, s2_len = 0, i;
 	char *concatenated;
-	int i;
 
 	/* treate s1 and s2 as empty string if NULL */
 	if (s1 == NULL)
+	{
 		s1 = "";
+	}
 	if (s1 == NULL)
+	{
 		s2 = "";
+	}
 	/* calculate the lenght of s1 and s2 */
 	while (s1[s1_len] != '\0')
 	{
@@ -33,7 +35,6 @@ char *str_concat(char *s1, char *s2)
 	}
 	/* allocace memory for the concatenated string */
 	concatenated = (char *)malloc((s1_len + s2_len + 1) * sizeof(char));
-	/* if it fails to create the space for the string */
 	if (concatenated == NULL)
 	{
 		return (NULL);
