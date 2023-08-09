@@ -43,11 +43,10 @@ char *str_concat(char *s1, char *s2)
 	{
 		concatenated[i] = s1[i];
 	}
-	concatenated[s1_len] = ' ';
 	/* Copy the characters from s2 to concatenated */
 	for (i = 0; i < s2_len; i++)
 	{
-		concatenated[s1_len + i + 1] = s2[i];
+		concatenated[s1_len + i] = s2[i];
 	}
 	/* add a null terminator to the concatenated string */
 	concatenated[s1_len + s2_len + 1] = '\0';
