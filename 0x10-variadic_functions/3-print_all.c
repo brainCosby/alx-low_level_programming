@@ -29,25 +29,18 @@ void print_all(const char * const format, ...)
 				break;
 			}
 			case 'i':
-			{
 				printf("%s%d", separator, va_arg(args_ptr, int));
 				break;
-			}
 			case 'f':
-			{
 				printf("%s%f", separator, va_arg(args_ptr, double));
 				break;
-			}
 			case 'c':
-			{
 				printf("%s%c", separator, va_arg(args_ptr, int));
 				break;
-			}
 		}
 		separator = ", ";
 		i++;
 	}
 	printf("\n");
-
 	va_end(args_ptr);
 }
