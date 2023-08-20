@@ -37,6 +37,9 @@ void print_all(const char * const format, ...)
 			case 'c':
 				printf("%s%c", separator, va_arg(args_ptr, int));
 				break;
+			default:
+				i++;
+				continue;
 		}
 		separator = ", ";
 		i++;
