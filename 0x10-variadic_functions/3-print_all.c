@@ -23,7 +23,7 @@ void print_all(const char * const format, ...)
 			{
 				str = "(nil)";
 			}
-			printf("%s%s",separator, str);
+			printf("%s%s", separator, str);
 		}
 		else if (format[i] == 'i')
 		{
