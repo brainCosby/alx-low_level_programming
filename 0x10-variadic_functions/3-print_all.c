@@ -25,15 +25,15 @@ void print_all(const char * const format, ...)
 			}
 			printf("%s%s", separator, str);
 		}
-		else if (format[i] == 'i')
+		if (format[i] == 'i')
 		{
 			printf("%s%d", separator, va_arg(args_ptr, int));
 		}
-		else if (format[i] == 'f')
+		if (format[i] == 'f')
 		{
 			printf("%s%f", separator, va_arg(args_ptr, double));
 		}
-		else if (format[i] == 'c')
+		if (format[i] == 'c')
 		{
 			printf("%s%c", separator, va_arg(args_ptr, int));
 		}
