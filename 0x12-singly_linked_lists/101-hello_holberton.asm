@@ -1,14 +1,9 @@
-section .data
-    hello_string db "Hello, Holberton", 0
-
-section .text
-    global _start
-    extern printf
-
-_start:
-    mov rdi, hello_string
-    call printf
-
-    mov rax, 60         ; syscall number for exit
-    xor rdi, rdi        ; exit status 0
-    syscall
+global   main
+	  extern    printf
+main:
+	  mov   edi, format
+	  xor   eax, eax
+	  call  printf
+	  mov   eax, 0
+	  ret
+format: db `Hello, Holberton\n`,0
