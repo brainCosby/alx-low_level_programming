@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * list_len - Counts the number of elements in a linked list.
+ * listint_len - Counts the number of elements in a linked list.
  * @h: A pointer to the head of the linked list.
  * Return: The number of elements in the linked list.
  */
