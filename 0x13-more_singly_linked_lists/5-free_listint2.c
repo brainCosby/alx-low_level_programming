@@ -6,13 +6,15 @@
  * free_listint - Frees a linked list.
  * @head: Frees a listint_t list and sets the head to NULL.
  */
-void free_listint(listint_t *head)
+void free_listint2(listint_t **head)
 {
-	while (head != NULL)
-	{
-		listint_t *temp = head;
+	listint_t *current = *head;
 
-		head = head->next;
+	while (current != NULL)
+	{
+		listint_t *temp = current;
+
+		current = current->next;
 		free(temp);
 	}
 
